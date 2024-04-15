@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Weather Master</string>
+    <string name="open">Açık</string>
+    <string name="close">Kapalı</string>
+    <string name="about_me">Bu uygulama Emir Petek tarafından geliştirilmiştir. Herhangi bir fikir, öneri vs. için emirpetek2002@gmail.com ile iletişime geçebilirsiniz.</string>
+</resources>

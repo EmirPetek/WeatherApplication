@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#404146"
+        app:cardCornerRadius="15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewWeeklyWeatherDropdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/baseline_arrow_drop_up_24" />
+
+            <TextView
+                android:id="@+id/textViewWeeklyWeatherDayName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Bugün"
+                android:textColor="#F3F3F3"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewWeeklyWeatherDropdown"
+                app:layout_constraintStart_toEndOf="@+id/imageViewWeeklyWeatherDropdown"
+                app:layout_constraintTop_toTopOf="@+id/imageViewWeeklyWeatherDropdown" />
+
+            <ImageView
+                android:id="@+id/imageViewWeeklyWeatherIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="60dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewWeeklyWeatherDayName"
+                app:layout_constraintEnd_toStartOf="@+id/textViewWeeklyWeatherMinTemp"
+                app:layout_constraintTop_toTopOf="@+id/textViewWeeklyWeatherDayName"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <TextView
+                android:id="@+id/textViewWeeklyWeatherMinTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:text="25°C"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/imageViewWeeklyWeatherIcon"
+                app:layout_constraintEnd_toStartOf="@+id/textViewWeeklyWeatherMaxTemp"
+                app:layout_constraintTop_toTopOf="@+id/imageViewWeeklyWeatherIcon" />
+
+            <TextView
+                android:id="@+id/textViewWeeklyWeatherMaxTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="32dp"
+                android:text="30°C"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewWeeklyWeatherMinTemp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/textViewWeeklyWeatherMinTemp"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewWeeklyWeatherDropdown" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
